@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: oklch(0.985 0.002 75);
+  --foreground: oklch(0.216 0.006 56);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.216 0.006 56);
+  --primary: oklch(0.53 0.13 155);
+  --primary-foreground: oklch(0.985 0.002 75);
+  --muted: oklch(0.96 0.004 75);
+  --muted-foreground: oklch(0.553 0.013 58);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.906 0.005 75);
+  --ring: oklch(0.53 0.13 155);
+  --input: oklch(0.906 0.005 75);
+  --accent: oklch(0.96 0.004 75);
+  --accent-foreground: oklch(0.216 0.006 56);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.216 0.006 56);
+  --secondary: oklch(0.96 0.004 75);
+  --secondary-foreground: oklch(0.216 0.006 56);
+
+  /* GoatEO extended palette */
+  --teal: oklch(0.53 0.13 155);
+  --teal-dark: oklch(0.46 0.11 155);
+  --amber: oklch(0.666 0.179 58);
+  --purple: oklch(0.55 0.15 300);
+  --blue: oklch(0.55 0.15 250);
+
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-amber: var(--amber);
+  --color-purple: var(--purple);
+  --color-blue: var(--blue);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Score ring animation */
+@keyframes score-fill {
+  from { stroke-dashoffset: 282.74; }
+}
+
+/* GoatEO component patterns */
+.goat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px 0 oklch(0 0 0 / 0.03);
+}
+
+.goat-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
